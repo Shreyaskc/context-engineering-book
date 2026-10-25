@@ -1,4 +1,5 @@
 """Runnable prerequisite concepts, distinct from machine capability inventory."""
+from contextlib import closing
 import json
 import math
 import sqlite3
@@ -13,7 +14,7 @@ def examples():
     relevant, retrieved = {"policy", "purchase", "case"}, ["policy", "unrelated"]
     true_positives = len(relevant.intersection(retrieved))
     start, end = instant("2026-04-14T09:00:00Z"), instant("2026-04-14T10:00:00Z")
-    with sqlite3.connect(":memory:") as db:
+    with closing(sqlite3.connect(":memory:")) as db, db:
         db.execute("CREATE VIRTUAL TABLE ranking USING fts5(text)")
         db.executemany("INSERT INTO ranking VALUES (?)", [("blue mug purchase",), ("red plate",), ("mug return",)])
         rows = db.execute("SELECT text, bm25(ranking) FROM ranking WHERE ranking MATCH 'mug' ORDER BY bm25(ranking), text").fetchall()

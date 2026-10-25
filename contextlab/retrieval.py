@@ -1,4 +1,5 @@
 """Scoped lexical, genuine local dense retrieval, RRF and labeled heuristics."""
+from contextlib import closing
 import hashlib
 import importlib.metadata
 import json
@@ -21,7 +22,7 @@ def lexical(chunks, query, k=5):
         return []
     # Build FTS statistics from eligible content only. Hidden tenants/teams cannot
     # influence BM25 scores through a shared-corpus document-frequency side channel.
-    with sqlite3.connect(":memory:") as db:
+    with closing(sqlite3.connect(":memory:")) as db, db:
         db.execute("CREATE VIRTUAL TABLE scoped_fts USING fts5(chunk_id UNINDEXED, text)")
         db.executemany("INSERT INTO scoped_fts VALUES (?, ?)", [(c["chunk_id"], c["text"]) for c in chunks])
         expression = " OR ".join('"' + term.replace('"', '""') + '"' for term in terms)

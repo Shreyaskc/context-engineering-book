@@ -1,4 +1,5 @@
 """The contextlab CLI: shared stages, clean lab workspaces, no business actions."""
+from contextlib import closing
 import argparse
 import json
 from pathlib import Path
@@ -60,7 +61,7 @@ def main(argv=None):
         if args.command == "readiness":
             result = examples()
         elif args.command == "doctor":
-            with sqlite3.connect(":memory:") as db:
+            with closing(sqlite3.connect(":memory:")) as db, db:
                 db.execute("CREATE VIRTUAL TABLE check_fts USING fts5(text)")
             result = {"status": "ready_core", "package": "contextlab", "version": __version__, "python": platform.python_version(), "system": platform.system(), "architecture": platform.machine(), "sqlite": sqlite3.sqlite_version, "fts5": True, "core_third_party_dependencies": [], "optional_dense": "existing local MiniLM snapshot and ML dependencies required", "stages": STAGES, "review_cycles_completed": 0}
         else:

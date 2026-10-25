@@ -1,5 +1,6 @@
 """Executable safety and correctness properties of the evolving synthetic system."""
 import copy
+from contextlib import closing
 from dataclasses import replace
 import json
 from pathlib import Path
@@ -188,7 +189,7 @@ class SupplyChain(unittest.TestCase):
         self.assertFalse(memory_usable(memory, self.workspace, self.scope))
         self.assertFalse(any("SYN-REPORT-104@1" in e["source_refs"] for e in query_graph(graph, self.workspace, self.scope, "CASE-SYN-104")))
         self.assertFalse(any(c["source_id"] == "SYN-REPORT-104" for c in self.workspace.chunks(self.scope)))
-        with self.workspace.connect() as db:
+        with closing(self.workspace.connect()) as db, db:
             self.assertEqual(db.execute("SELECT count(*) FROM chunk_fts WHERE ref=?", ("SYN-REPORT-104@1",)).fetchone()[0], 0)
         result = replay(receipt, self.workspace, self.scope)
         self.assertIn("artifact_missing_or_invalidated", result["changes"])

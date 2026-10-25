@@ -1,5 +1,6 @@
 """Versioned source envelopes, span lineage, scoped eligibility and SQLite/FTS5."""
 from dataclasses import dataclass
+from contextlib import closing
 from datetime import datetime, timezone
 import hashlib
 import json
@@ -194,7 +195,8 @@ class Workspace:
         if not self.db.exists():
             sources = load_sources()
             actual_ingested = datetime.now(timezone.utc).isoformat()
-            with self.connect() as db:
+            # Exit the transaction (commit/rollback) before closing the owned handle.
+            with closing(self.connect()) as db, db:
                 db.executescript("CREATE TABLE sources(ref TEXT PRIMARY KEY, envelope TEXT NOT NULL); CREATE TABLE chunks(chunk_id TEXT PRIMARY KEY, ref TEXT NOT NULL, body TEXT NOT NULL); CREATE TABLE tombstones(source_id TEXT PRIMARY KEY, deleted_at TEXT NOT NULL); CREATE TABLE metadata(key TEXT PRIMARY KEY, value TEXT NOT NULL); CREATE VIRTUAL TABLE chunk_fts USING fts5(chunk_id UNINDEXED, ref UNINDEXED, text);")
                 for source in sources:
                     db.execute("INSERT INTO sources VALUES (?, ?)", (source["ref"], canonical(source)))
@@ -206,18 +208,19 @@ class Workspace:
         return self
 
     def connect(self):
+        """Return a caller-owned raw connection; its transaction context does not close it."""
         return sqlite3.connect(self.db)
 
     def sources(self):
-        with self.connect() as db:
+        with closing(self.connect()) as db, db:
             return [json.loads(row[0]) for row in db.execute("SELECT envelope FROM sources ORDER BY ref")]
 
     def tombstones(self):
-        with self.connect() as db:
+        with closing(self.connect()) as db, db:
             return {row[0] for row in db.execute("SELECT source_id FROM tombstones")}
 
     def metadata(self):
-        with self.connect() as db:
+        with closing(self.connect()) as db, db:
             return dict(db.execute("SELECT key, value FROM metadata"))
 
     def eligible(self, scope):
@@ -227,7 +230,7 @@ class Workspace:
         refs = [s["ref"] for s in self.eligible(scope)]
         if not refs:
             return []
-        with self.connect() as db:
+        with closing(self.connect()) as db, db:
             rows = db.execute("SELECT body FROM chunks WHERE ref IN (" + ",".join("?" for _ in refs) + ") ORDER BY chunk_id", refs)
             return [json.loads(row[0]) for row in rows]
 
@@ -243,7 +246,7 @@ class Workspace:
         Receipts contain hashes, not source content, and are retained as audit evidence.
         """
         instant(at)
-        with self.connect() as db:
+        with closing(self.connect()) as db, db:
             db.execute("PRAGMA secure_delete=ON")
             refs = [r[0] for r in db.execute("SELECT ref FROM sources") if r[0].rsplit("@", 1)[0] == source_id]
             for ref in refs:
