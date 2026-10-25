@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contextlab source envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_id", "version", "ref", "sha256", "content", "tenant", "allowed_teams", "allowed_principals", "origin", "license", "provenance", "available_at", "valid_from", "valid_until", "deleted_at", "supersedes", "branch", "trust", "kind", "record", "lineage"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source_id": {"type": "string", "pattern": "^SYN-[A-Z0-9-]+$"},
+    "version": {"type": "integer", "minimum": 1},
+    "ref": {"type": "string"},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "content": {"type": "string", "minLength": 1},
+    "tenant": {"enum": ["northstar-retail", "harbor-retail"]},
+    "allowed_teams": {"type": "array", "uniqueItems": true, "items": {"enum": ["service-operations", "inventory-operations", "platform-engineering"]}},
+    "allowed_principals": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "origin": {"const": "synthetic"},
+    "license": {"const": "MIT"},
+    "provenance": {"const": "original fictional teaching corpus; not UCI-derived"},
+    "available_at": {"type": "string", "format": "date-time"},
+    "valid_from": {"type": "string", "format": "date-time"},
+    "valid_until": {"type": ["string", "null"], "format": "date-time"},
+    "deleted_at": {"type": ["string", "null"], "format": "date-time"},
+    "supersedes": {"type": "array", "items": {"type": "string"}},
+    "branch": {"enum": ["common", "northstar-v3", "northstar-v4"]},
+    "trust": {"enum": ["authoritative_fixture", "reported_claim", "untrusted_instruction"]},
+    "kind": {"enum": ["guide", "policy", "purchase", "case", "report", "fulfillment", "inventory", "adversarial"]},
+    "record": {"type": "object"},
+    "lineage": {"type": "object", "additionalProperties": false, "required": ["parent_ref", "char_start", "char_end"], "properties": {"parent_ref": {"type": "null"}, "char_start": {"const": 0}, "char_end": {"type": "integer", "minimum": 1}}}
+  },
+  "$comment": "The standard-library runtime also checks ref/version consistency, content hash, timestamp timezone/order, grants and exact span length. JSON Schema is documentation, not a claim that schema syntax proves semantic support. Historical dataset derivatives need a separately versioned envelope contract and CC BY attribution; they are not admitted to this synthetic-only v1 corpus."
+}

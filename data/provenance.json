@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "synthetic_fixture": {
+    "path": "fixtures/case-syn-104.json",
+    "origin": "user-specified fictional teaching case",
+    "license": "MIT",
+    "contains_real_customer_identifiers": false,
+    "derived_from_uci_rows": false
+  },
+  "original_corpus": {
+    "path": "fixtures/corpus.jsonl",
+    "source_envelopes": 54,
+    "authoring_command": "python3 scripts/build_synthetic_corpus.py",
+    "origin": "original fictional teaching corpus; not UCI-derived",
+    "license": "MIT",
+    "ingestion_event_fixture": "fixtures/ingestion-events.jsonl",
+    "actual_import_times": "separate runtime SQLite metadata and ignored local receipts; not backdated to synthetic events"
+  },
+  "public_dataset": {
+    "title": "Online Retail",
+    "creator": "Daqing Chen",
+    "year": 2015,
+    "doi": "10.24432/C5BW33",
+    "source_url": "https://archive.ics.uci.edu/dataset/352/online%2Bretail",
+    "archive_url": "https://archive.ics.uci.edu/static/public/352/online+retail.zip",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "status": "not_downloaded_for_this_project",
+    "archive_sha256": null,
+    "workbook_sha256": null,
+    "derived_records": [],
+    "null_checksum_reason": "No project download or derivation has occurred; do not fabricate checksums.",
+    "future_minimization": "Omit CustomerID entirely. Keep raw archive and workbook outside Git. Record verified source checksums, transformation code hash, attribution, selected fields, row-selection rule, and minimized derived checksum before admitting records. Do not label synthetic invoice or delivery facts as UCI-derived."
+  }
+}

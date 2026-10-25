@@ -1,0 +1,40 @@
+{
+  "labels": {
+    "checks_pending": {
+      "ref": "SYN-CASE-104@1",
+      "source_id": "SYN-CASE-104",
+      "source_sha256": "5a47a93681a6d0336b582f82e741b67e643c562b0687e1431c5183f3de8c97e8",
+      "span": "full_source",
+      "support": "curated affirmative support label for this exact fixture claim only"
+    },
+    "customer_reports_one_red": {
+      "ref": "SYN-REPORT-104@1",
+      "source_id": "SYN-REPORT-104",
+      "source_sha256": "f972debc03c529112ee45d5679563309984434cf98f27c502d7b5914714ccf8a",
+      "span": "full_source",
+      "support": "curated affirmative support label for this exact fixture claim only"
+    },
+    "fulfillment_unknown": {
+      "ref": "SYN-FULFILLMENT-104@1",
+      "source_id": "SYN-FULFILLMENT-104",
+      "source_sha256": "1b58008a8303b3d782aba7df82970d749ad7d1e7a41fce15b5033560bb680b62",
+      "span": "full_source",
+      "support": "curated affirmative support label for this exact fixture claim only"
+    },
+    "no_automatic_refund": {
+      "ref": "SYN-POLICY-RETURNS-V3@1",
+      "source_id": "SYN-POLICY-RETURNS-V3",
+      "source_sha256": "3306c5e7273151e28d3fb5be6319c75d363e13a9ee0dc78687453d0171993e7b",
+      "span": "full_source",
+      "support": "curated affirmative support label for this exact fixture claim only"
+    },
+    "purchase_two_blue_1250": {
+      "ref": "SYN-PURCHASE-4817@1",
+      "source_id": "SYN-PURCHASE-4817",
+      "source_sha256": "89fbc2332155d6969d108037a53b891d8c45560b6f8460826a3ebeb01179748c",
+      "span": "full_source",
+      "support": "curated affirmative support label for this exact fixture claim only"
+    }
+  },
+  "schema_version": 1
+}

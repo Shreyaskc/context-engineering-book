@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "status": "provisional_implemented_v0.1_pending_comprehensive_review",
+  "cli": "python -m contextlab",
+  "implemented": true,
+  "chapters": [
+    {
+      "chapter": 1,
+      "slug": "evidence-inventory",
+      "stages": [
+        "evidence-inventory"
+      ],
+      "needs": [],
+      "artifact": "01-evidence-inventory.json",
+      "failure": "unattributed delivery claim"
+    },
+    {
+      "chapter": 2,
+      "slug": "corpus",
+      "stages": [
+        "corpus"
+      ],
+      "needs": [
+        1
+      ],
+      "artifact": "02-corpus.json",
+      "failure": "chunk detaches exception"
+    },
+    {
+      "chapter": 3,
+      "slug": "lexical",
+      "stages": [
+        "lexical"
+      ],
+      "needs": [
+        2
+      ],
+      "artifact": "03-lexical.json",
+      "failure": "paraphrase misses or nearby ID substitutes"
+    },
+    {
+      "chapter": 4,
+      "slug": "dense",
+      "stages": [
+        "dense"
+      ],
+      "needs": [
+        3
+      ],
+      "artifact": "04-dense.json",
+      "failure": "encoder truncates a required clause"
+    },
+    {
+      "chapter": 5,
+      "slug": "hybrid-rerank",
+      "stages": [
+        "hybrid-rerank"
+      ],
+      "needs": [
+        4
+      ],
+      "artifact": "05-hybrid-rerank.json",
+      "failure": "incomparable raw scores combined"
+    },
+    {
+      "chapter": 6,
+      "slug": "pack",
+      "stages": [
+        "pack"
+      ],
+      "needs": [
+        5
+      ],
+      "artifact": "06-pack.json",
+      "failure": "serialized overhead or required evidence overflows"
+    },
+    {
+      "chapter": 7,
+      "slug": "claims",
+      "stages": [
+        "claims"
+      ],
+      "needs": [
+        6
+      ],
+      "artifact": "07-claims.json",
+      "failure": "valid citation for unsupported claim"
+    },
+    {
+      "chapter": 8,
+      "slug": "structured",
+      "stages": [
+        "structured"
+      ],
+      "needs": [
+        7
+      ],
+      "artifact": "08-structured.json",
+      "failure": "forged or wrong-scope tool output"
+    },
+    {
+      "chapter": 9,
+      "slug": "temporal",
+      "stages": [
+        "temporal"
+      ],
+      "needs": [
+        8
+      ],
+      "artifact": "09-temporal.json",
+      "failure": "deleted source survives derivative"
+    },
+    {
+      "chapter": 10,
+      "slug": "memory",
+      "stages": [
+        "memory"
+      ],
+      "needs": [
+        9
+      ],
+      "artifact": "10-memory.json",
+      "failure": "uncertainty lost or stale memory reused"
+    },
+    {
+      "chapter": 11,
+      "slug": "graph",
+      "stages": [
+        "graph"
+      ],
+      "needs": [
+        10
+      ],
+      "artifact": "11-graph.json",
+      "failure": "inferred edge promoted to delivered fact"
+    },
+    {
+      "chapter": 12,
+      "slug": "boundaries",
+      "stages": [
+        "boundaries"
+      ],
+      "needs": [
+        11
+      ],
+      "artifact": "12-boundaries.json",
+      "failure": "Harbor leak or injected refund instruction"
+    },
+    {
+      "chapter": 13,
+      "slug": "evaluate",
+      "stages": [
+        "evaluate"
+      ],
+      "needs": [
+        12
+      ],
+      "artifact": "13-evaluate.json",
+      "failure": "drift or test-set tuning hidden"
+    },
+    {
+      "chapter": 14,
+      "slug": "capstone",
+      "stages": [
+        "capstone"
+      ],
+      "needs": [
+        13
+      ],
+      "artifact": "14-capstone.json",
+      "failure": "missing evidence but confident assessment"
+    }
+  ]
+}

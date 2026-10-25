@@ -1,0 +1,10 @@
+# Direct versions used by the optional cached-runtime diagnostic.
+# This is NOT a complete transitive lock or a validated clean install.
+# Historical direct pins, also used to resolve the complete tested closure:
+# requirements/ml-macos-arm64-py312.lock (macOS 14+, arm64, Python 3.12).
+numpy==2.5.1
+torch==2.13.0
+transformers==5.14.1
+tokenizers==0.22.2
+safetensors==0.8.0
+huggingface-hub==1.24.0

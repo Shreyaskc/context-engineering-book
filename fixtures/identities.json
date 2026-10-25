@@ -1,0 +1,7 @@
+{
+  "service-reader": {"tenant": "northstar-retail", "teams": ["service-operations"]},
+  "inventory-reader": {"tenant": "northstar-retail", "teams": ["inventory-operations"]},
+  "platform-reader": {"tenant": "northstar-retail", "teams": ["platform-engineering"]},
+  "service-lead": {"tenant": "northstar-retail", "teams": ["service-operations"]},
+  "harbor-reader": {"tenant": "harbor-retail", "teams": ["service-operations"]}
+}

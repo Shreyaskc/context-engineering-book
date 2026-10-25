@@ -1,0 +1,65 @@
+{
+  "checks_scope": "LFS SHA-256 for weights; Git blob SHA-1 for the selected non-LFS assets; metadata-only remote read; no weights downloaded.",
+  "model_card_license": "apache-2.0",
+  "observed_at_utc": "2026-10-25T01:01:04.628249+00:00",
+  "repository_id": "sentence-transformers/all-MiniLM-L6-v2",
+  "response_sha256": "1f6a0e06203c70da150fede732a3cc98fdc5b94c9d88c33e298a2dc4c254c827",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "selected_assets": [
+    {
+      "blobId": "d1514c3162bbe87b343f565fadc62e6c06f04f03",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "1_Pooling/config.json",
+      "size": 190
+    },
+    {
+      "blobId": "44af2e3b0fa3a0b6239e48422972bf755f28fde0",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "README.md",
+      "size": 10502
+    },
+    {
+      "blobId": "72b987fd805cfa2b58c4c8c952b274a11bfd5a00",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "config.json",
+      "size": 612
+    },
+    {
+      "blobId": "d49eff1e4a6f0e3ba5069f21c6d20aad156dd2c9",
+      "lfs": {
+        "pointerSize": 133,
+        "sha256": "53aa51172d142c89d9012cce15ae4d6cc0ca6895895114379cacb4fab128d9db",
+        "size": 90868376
+      },
+      "matches_local_sha256": true,
+      "rfilename": "model.safetensors",
+      "size": 90868376
+    },
+    {
+      "blobId": "952a9b81c0bfd99800fabf352f69c7ccd46c5e43",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "modules.json",
+      "size": 349
+    },
+    {
+      "blobId": "59d594003bf59880a884c574bf88ef7555bb0202",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "sentence_bert_config.json",
+      "size": 53
+    },
+    {
+      "blobId": "cb202bfe2e3c98645018a6d12f182a434c9d3e02",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "tokenizer.json",
+      "size": 466247
+    },
+    {
+      "blobId": "c79f2b6a0cea6f4b564fed1938984bace9d30ff0",
+      "matches_local_git_blob_sha1": true,
+      "rfilename": "tokenizer_config.json",
+      "size": 350
+    }
+  ],
+  "source_url": "https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/revision/1110a243fdf4706b3f48f1d95db1a4f5529b4d41?blobs=true",
+  "weights_downloaded": false
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "frozen_labeling_note": "Manually authored exact source relevance labels before the first measured retrieval run. Dev and held-out queries are separate. No method is assumed to win. Labels are teaching judgments, not universal relevance truth.",
+  "scope": {
+    "principal": "service-reader",
+    "tenant": "northstar-retail",
+    "team": "service-operations",
+    "as_of": "2026-01-15T12:00:00Z",
+    "branch": "northstar-v3",
+    "knowledge_at": null
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "split": "dev",
+      "slice": "policy",
+      "query": "What checks does returns-v3 require?",
+      "relevant": [
+        "SYN-POLICY-RETURNS-V3"
+      ]
+    },
+    {
+      "id": "Q02",
+      "split": "dev",
+      "slice": "exact_id",
+      "query": "INV-SYN-4817 purchase quantity price",
+      "relevant": [
+        "SYN-PURCHASE-4817"
+      ]
+    },
+    {
+      "id": "Q03",
+      "split": "dev",
+      "slice": "reported_claim",
+      "query": "What does the customer report for CASE-SYN-104?",
+      "relevant": [
+        "SYN-REPORT-104"
+      ]
+    },
+    {
+      "id": "Q04",
+      "split": "dev",
+      "slice": "uncertainty",
+      "query": "Is fulfillment known for CASE-SYN-104?",
+      "relevant": [
+        "SYN-FULFILLMENT-104"
+      ]
+    },
+    {
+      "id": "Q05",
+      "split": "dev",
+      "slice": "citation",
+      "query": "Does a correctly formed citation prove semantic support?",
+      "relevant": [
+        "SYN-CITATION-GUIDE"
+      ]
+    },
+    {
+      "id": "Q06",
+      "split": "dev",
+      "slice": "budget",
+      "query": "How should a UTF-8 byte budget count serialization overhead?",
+      "relevant": [
+        "SYN-PACKING-GUIDE",
+        "SYN-UNICODE-GUIDE"
+      ]
+    },
+    {
+      "id": "Q07",
+      "split": "dev",
+      "slice": "memory",
+      "query": "What uncertainty must memory compression preserve?",
+      "relevant": [
+        "SYN-COMPRESSION-GUIDE",
+        "SYN-UNKNOWN-GUIDE"
+      ]
+    },
+    {
+      "id": "Q08",
+      "split": "dev",
+      "slice": "temporal",
+      "query": "Explain available-at versus valid-from and valid-until in replay",
+      "relevant": [
+        "SYN-FRESHNESS-GUIDE"
+      ]
+    },
+    {
+      "id": "Q09",
+      "split": "dev",
+      "slice": "deletion",
+      "query": "What derivatives must deletion invalidate?",
+      "relevant": [
+        "SYN-DELETION-GUIDE",
+        "SYN-CORRECTION-GUIDE"
+      ]
+    },
+    {
+      "id": "Q10",
+      "split": "dev",
+      "slice": "graph",
+      "query": "What source and trust provenance is required for graph edges?",
+      "relevant": [
+        "SYN-GRAPH-GUIDE",
+        "SYN-INFERENCE-GUIDE"
+      ]
+    },
+    {
+      "id": "Q11",
+      "split": "dev",
+      "slice": "boundary",
+      "query": "Does shared tenant membership imply team access?",
+      "relevant": [
+        "SYN-ROLE-GUIDE",
+        "SYN-AUTHORIZATION-GUIDE"
+      ]
+    },
+    {
+      "id": "Q12",
+      "split": "dev",
+      "slice": "hybrid",
+      "query": "Why combine rank contributions instead of raw BM25 and cosine scores?",
+      "relevant": [
+        "SYN-HYBRID-GUIDE"
+      ]
+    },
+    {
+      "id": "Q13",
+      "split": "heldout",
+      "slice": "paraphrase",
+      "query": "Can the system send money back without human review?",
+      "relevant": [
+        "SYN-POLICY-RETURNS-V3",
+        "SYN-PAYMENT-GUIDE"
+      ]
+    },
+    {
+      "id": "Q14",
+      "split": "heldout",
+      "slice": "paraphrase",
+      "query": "Which shade and number did the buyer say arrived?",
+      "relevant": [
+        "SYN-REPORT-104"
+      ]
+    },
+    {
+      "id": "Q15",
+      "split": "heldout",
+      "slice": "exact_id",
+      "query": "CASE-SYN-104 linked invoice case check pending",
+      "relevant": [
+        "SYN-CASE-104"
+      ]
+    },
+    {
+      "id": "Q16",
+      "split": "heldout",
+      "slice": "correction",
+      "query": "How can a remembered fact be repaired after its source changes?",
+      "relevant": [
+        "SYN-CORRECTION-GUIDE",
+        "SYN-MEMORY-GUIDE"
+      ]
+    },
+    {
+      "id": "Q17",
+      "split": "heldout",
+      "slice": "tool",
+      "query": "Can an invoice tool result for a nearby case update verified state?",
+      "relevant": [
+        "SYN-TOOL-GUIDE",
+        "SYN-PURCHASE-CHECK"
+      ]
+    },
+    {
+      "id": "Q18",
+      "split": "heldout",
+      "slice": "provenance",
+      "query": "Are fictional tickets and policies evidence from the historical UCI retailer?",
+      "relevant": [
+        "SYN-DATASET-GUIDE",
+        "SYN-PROVENANCE-GUIDE"
+      ]
+    },
+    {
+      "id": "Q19",
+      "split": "heldout",
+      "slice": "unicode",
+      "query": "Count bytes for Caf\u00e9 \u00a325.00 coffee symbol",
+      "relevant": [
+        "SYN-UNICODE-GUIDE"
+      ]
+    },
+    {
+      "id": "Q20",
+      "split": "heldout",
+      "slice": "replay",
+      "query": "What records let a reader detect changed code and inputs during replay?",
+      "relevant": [
+        "SYN-OBSERVABILITY-GUIDE"
+      ]
+    }
+  ]
+}

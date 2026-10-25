@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "origin": "synthetic",
+  "case_id": "CASE-SYN-104",
+  "invoice_id": "INV-SYN-4817",
+  "tenant": "northstar-retail",
+  "organizations": {
+    "northstar-retail": {
+      "name": "Northstar Retail",
+      "business_units": ["service-operations", "inventory-operations"],
+      "support_function": "platform-engineering"
+    },
+    "harbor-retail": {"name": "Harbor Retail", "relationship": "separate_tenant"}
+  },
+  "purchase": {
+    "description": "blue mug",
+    "quantity": 2,
+    "unit_price_minor": 1250,
+    "currency": "GBP",
+    "source_id": "SYN-PURCHASE-4817",
+    "verification_status": "requires_check"
+  },
+  "customer_report": {
+    "description": "one red mug",
+    "quantity": 1,
+    "source_id": "SYN-REPORT-104",
+    "evidence_type": "reported_claim"
+  },
+  "fulfillment": {"status": "unknown", "source_id": null},
+  "policy": {
+    "policy_id": "returns-v3",
+    "origin": "synthetic",
+    "source_id": "SYN-POLICY-RETURNS-V3",
+    "required_checks": ["purchase", "case"],
+    "automatic_refund_authorized": false
+  },
+  "policy_v4": {"activation": "explicit_branch_or_reset_only", "active": false},
+  "as_of": "2026-01-15T12:00:00Z",
+  "clock_origin": "fixed fictional teaching clock; not transaction provenance"
+}

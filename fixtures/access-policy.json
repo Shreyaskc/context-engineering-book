@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "revision": "current-disclosure-v1",
+  "scope": "current fixture policy; historical as-of never rewinds these grants",
+  "source_denials": {
+    "SYN-REVOKED-NOTE": {"teams": ["service-operations"], "principals": []}
+  }
+}

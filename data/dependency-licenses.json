@@ -1,0 +1,349 @@
+{
+  "environment": "fresh Mac arm64 Python 3.12 installation; project-local hash-locked official wheels",
+  "license_scope": "Package-declared metadata, not a legal determination; retain each upstream package license. The lab MIT license does not relicense dependencies. No wheels/package source are redistributed here.",
+  "lock_path": "requirements/ml-macos-arm64-py312.lock",
+  "lock_sha256": "77145d84d45d6637eddb0ecc49d42f8bb041d1048e1d47a606da08f1b64a5bca",
+  "packages": [
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "MIT",
+      "legacy_license_header": null,
+      "name": "annotated-doc",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/annotated-doc/0.0.5/",
+      "version": "0.0.5"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "MIT",
+      "legacy_license_header": null,
+      "name": "anyio",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/anyio/4.15.1/",
+      "version": "4.15.1"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "MPL-2.0",
+      "name": "certifi",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/certifi/2026.10.23/",
+      "version": "2026.10.23"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-3-Clause",
+      "legacy_license_header": null,
+      "name": "click",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/click/8.5.0/",
+      "version": "8.5.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "declared_license_expression": "MIT",
+      "legacy_license_header": null,
+      "name": "filelock",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/filelock/4.2.4/",
+      "version": "4.2.4"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-3-Clause",
+      "legacy_license_header": null,
+      "name": "fsspec",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/fsspec/2026.9.0/",
+      "version": "2026.9.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "MIT",
+      "name": "h11",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/h11/0.16.0/",
+      "version": "0.16.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "declared_license_expression": "Apache-2.0",
+      "legacy_license_header": null,
+      "name": "hf-xet",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/hf-xet/1.7.0/",
+      "version": "1.7.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "declared_license_expression": "BSD-3-Clause",
+      "legacy_license_header": null,
+      "name": "httpcore",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/httpcore/1.0.9/",
+      "version": "1.0.9"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "BSD-3-Clause",
+      "name": "httpx",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/httpx/0.28.1/",
+      "version": "0.28.1"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "Apache-2.0",
+      "name": "huggingface_hub",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/huggingface_hub/1.24.0/",
+      "version": "1.24.0"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-3-Clause",
+      "legacy_license_header": null,
+      "name": "idna",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/idna/3.20/",
+      "version": "3.20"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": null,
+      "name": "Jinja2",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/Jinja2/3.1.6/",
+      "version": "3.1.6"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": null,
+      "name": "markdown-it-py",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/markdown-it-py/4.2.0/",
+      "version": "4.2.0"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-3-Clause",
+      "legacy_license_header": null,
+      "name": "MarkupSafe",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/MarkupSafe/3.0.4/",
+      "version": "3.0.4"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": null,
+      "name": "mdurl",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/mdurl/0.1.2/",
+      "version": "0.1.2"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "BSD",
+      "name": "mpmath",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/mpmath/1.3.0/",
+      "version": "1.3.0"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-3-Clause",
+      "legacy_license_header": null,
+      "name": "networkx",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/networkx/3.7/",
+      "version": "3.7"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "legacy_license_header": null,
+      "name": "numpy",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/numpy/2.5.1/",
+      "version": "2.5.1"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "legacy_license_header": null,
+      "name": "packaging",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/packaging/26.3/",
+      "version": "26.3"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "BSD-2-Clause",
+      "legacy_license_header": null,
+      "name": "Pygments",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/Pygments/2.21.0/",
+      "version": "2.21.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "MIT",
+      "name": "PyYAML",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/PyYAML/6.0.3/",
+      "version": "6.0.3"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "Apache-2.0 AND CNRI-Python",
+      "legacy_license_header": null,
+      "name": "regex",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/regex/2026.9.29/",
+      "version": "2026.9.29"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "MIT",
+      "name": "rich",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/rich/15.0.0/",
+      "version": "15.0.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": null,
+      "name": "safetensors",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/safetensors/0.8.0/",
+      "version": "0.8.0"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "MIT",
+      "legacy_license_header": null,
+      "name": "setuptools",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/setuptools/84.2.1/",
+      "version": "84.2.1"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: ISC License (ISCL)"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "ISC License",
+      "name": "shellingham",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/shellingham/1.5.4/",
+      "version": "1.5.4"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": "BSD",
+      "name": "sympy",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/sympy/1.14.0/",
+      "version": "1.14.0"
+    },
+    {
+      "declared_license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "declared_license_expression": null,
+      "legacy_license_header": null,
+      "name": "tokenizers",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/tokenizers/0.22.2/",
+      "version": "0.22.2"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT",
+      "legacy_license_header": null,
+      "name": "torch",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/torch/2.13.0/",
+      "version": "2.13.0"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": null,
+      "legacy_license_header": "MPL-2.0 AND MIT",
+      "name": "tqdm",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/tqdm/4.70.1/",
+      "version": "4.70.1"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": null,
+      "legacy_license_header": "Apache 2.0 License",
+      "name": "transformers",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/transformers/5.14.1/",
+      "version": "5.14.1"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "MIT",
+      "legacy_license_header": null,
+      "name": "typer",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/typer/0.27.3/",
+      "version": "0.27.3"
+    },
+    {
+      "declared_license_classifiers": [],
+      "declared_license_expression": "PSF-2.0",
+      "legacy_license_header": null,
+      "name": "typing_extensions",
+      "redistributed_in_lab_repository": false,
+      "source_url": "https://pypi.org/project/typing_extensions/4.16.0/",
+      "version": "4.16.0"
+    }
+  ],
+  "schema_version": 1
+}

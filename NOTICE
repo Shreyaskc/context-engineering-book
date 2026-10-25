@@ -1,0 +1,34 @@
+Scope of MIT
+============
+The MIT license applies to user-owned lab code, synthetic fixtures, and companion
+documentation authored in this project. It does not relicense public datasets,
+third-party code, model weights, tokenizers, or any book manuscript/artwork.
+
+Public data reference (no download or derived rows included in this baseline)
+===========================================================================
+Chen, D. (2015). Online Retail [Dataset]. UCI Machine Learning Repository.
+https://doi.org/10.24432/C5BW33
+https://archive.ics.uci.edu/dataset/352/online%2Bretail
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+The historical retailer is distinct from all fictional organizations here.
+Tickets, policies, tenant relationships, invoices beginning INV-SYN-, and delivery
+claims in the companion are synthetic. Their presence is not evidence about the
+UCI retailer or its customers.
+
+Optional local model reference
+==============================
+sentence-transformers/all-MiniLM-L6-v2
+https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+Model card declares Apache-2.0. Observe the model's own terms and attribution.
+No weights or tokenizer files are redistributed in this repository.
+
+Existing Ollama model tags are local observations, not a redistribution grant.
+Their model-license text and provenance require review before publishing model
+instructions or redistributed assets. MIT does not apply to those assets.
+
+The complete optional dependency lock names official upstream distributions.
+Their declared license metadata is recorded in data/dependency-licenses.json.
+Package licenses remain separate from the user-owned lab MIT license. No wheel,
+dependency source tree, model weight, or tokenizer asset is redistributed here.
