@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "scope": "Fixed rank/label arithmetic examples for the documented Q20 and Q07 arrangements. Not fresh retrieval, inference, latency or benchmark evidence. No raw execution report is distributed.",
+  "examples": [
+    {
+      "query_id": "Q20",
+      "complete_relevant_labels": [
+        "SYN-OBSERVABILITY-GUIDE"
+      ],
+      "ranked_source_ids": [
+        "SYN-FRESHNESS-GUIDE",
+        "SYN-OBSERVABILITY-GUIDE",
+        "SYN-CORRECTION-GUIDE",
+        "SYN-RETURNS-GUIDE",
+        "SYN-PROVENANCE-GUIDE"
+      ],
+      "expected_ndcg_at_5": 0.6309297535714575
+    },
+    {
+      "query_id": "Q07",
+      "complete_relevant_labels": [
+        "SYN-COMPRESSION-GUIDE",
+        "SYN-UNKNOWN-GUIDE"
+      ],
+      "ranked_source_ids": [
+        "SYN-CORRECTION-GUIDE",
+        "SYN-UNKNOWN-GUIDE",
+        "SYN-COMPRESSION-GUIDE",
+        "SYN-DELETION-GUIDE",
+        "SYN-MEMORY-GUIDE"
+      ],
+      "expected_ndcg_at_5": 0.6934264036172708
+    }
+  ]
+}
